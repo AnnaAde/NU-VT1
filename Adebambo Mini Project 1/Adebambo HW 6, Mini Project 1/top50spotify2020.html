@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Top 50 Songs on Spotify in 2020</title>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='./style.css'>
+  </head>
+
+  <body>
+
+
+<!--Navigation Bar-->
+<nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#intro">Introduction</a>
+    <a href="#exploratoryData">Exploratory Data Analysis</a>
+    <a href="#findingsViz">Findings from Visualization</a>
+    <a href="#genre">Top 50 Songs by Genre</a>
+    <a href="#allSongs">All 50 Songs Analysis</a>
+    <a href="#artists">Artists and Number of Songs in Top 50</a>
+    <a href="#conclusion">Conclusion</a>
+</nav>
+
+<main>
+    <div id = "home">
+      <h1 style='text-align:center'>Top 50 Songs on Spotify in 2020</h1>
+      <p>Anna Adebambo | Visualization Technologies 1 | ARTG 5330</p>
+    </div>
+
+
+    <!--Greeting and Playlist Suggestions just like Spotify app-->
+    <h4>Jump back in</h4>
+        <div class = "containerGreetingPlaylists">
+          <div class = "newMusicFriday">
+          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4JAvHpjipBk" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class = "topSongsGlobal">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbNG2KDcFcKOF" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class = "viralGlobal">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLiRSasKsNU9" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class = "peacefulMeditation">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZqd5JICZI0u" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class = "workFromHome">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTLSN7iG21yC" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class = "happyHoliday">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0HWhBzpBj05" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </div>
+
+
+    <!--Introduction-->
+    <div id = "intro">
+      <h2>Introduction</h2>
+      <p>Many people listen to music for a variety of reasons. In this page, I will explore the most popular songs and look for any similarities and trends among them.</p>  
+      <p>The dataset includes information about the top 50 songs on Spotify in 2020. The data was derived from Spotify. Information about each song's artist, the album it's on, and genre is included. In addition, the following variables are included (hover for definitions):</p>
+        <div class = 'variables'>
+          <div class = "varEnergy">
+            <p class = 'varTitle' style="text-align: center">Energy</p>
+            <div class = "overlayVar">
+              <div class = "varText" class="centerVar">Higher value means that the songs are more energetic</div>
+            </div>
+          </div>
+
+          <div class = "varDanceability">
+            <p class = 'varTitle' style="text-align: center">Danceability</p>
+            <div class = "overlayVar">
+              <div class = "varText">Higher value means that it is easier to dance to the song</div>
+            </div>
+          </div>
+          
+          <div class = "varKey">
+            <p class = 'varTitle' style="text-align: center">Key</p>
+            <div class = "overlayVar">
+              <div class = "varText">The primary identifier of songs. Main group of pitches or notes</div>
+            </div>
+          </div>
+
+          <div class = "varLoudness">
+            <p class = 'varTitle' style="text-align: center">Loudness</p>
+            <div class = "overlayVar">
+              <div class = "varText">Higher value means that the song is louder</div>
+            </div>
+          </div>
+
+          <div class = "varAcousticness">
+            <p class = 'varTitle' style="text-align: center">Acousticness</p>
+            <div class = "overlayVar">
+              <div class = "varText">This value describes how acoustic a song is</div>
+            </div>
+          </div>
+
+          <div class = "varSpeechiness">
+            <p class = 'varTitle' style="text-align: center">Speechiness</p>
+            <div class = "overlayVar">
+              <div class = "varText">Speechiness detects the presence of spoken words in a track</div>
+            </div>
+          </div>
+
+          <div class = "varInstrumentalness">
+            <p class = 'varTitle' style="text-align: center">Instrumentalness</p>
+            <div class = "overlayVar">
+              <div class = "varText">Describes whether a track contains no vocals. If the instrumentalness is closer to '1', the song is more likely to have no vocals</div>
+            </div>
+          </div>
+
+          <div class = "varLiveness">
+            <p class = 'varTitle' style="text-align: center">Liveness</p>
+            <div class = "overlayVar">
+              <div class = "varText">Describes the likelihood that the song was recorded with a live audience</div>
+            </div>
+          </div>
+
+          <div class = "varValence">
+            <p class = 'varTitle' style="text-align: center">Valence</p>
+            <div class = "overlayVar">
+              <div class = "varText">Describes the positiveness of a song. Higher valence means that the song sounds more positive</div>
+            </div>
+          </div>
+
+          <div class = "varTempo">
+            <p class = 'varTitle' style="text-align: center">Tempo</p>
+            <div class = "overlayVar">
+              <div class = "varText">Beats per minute</div>
+            </div>
+          </div>
+
+          <div class = "varDuration">
+            <p class = 'varTitle' style="text-align: center">Duration</p>
+            <div class = "overlayVar">
+              <div class = "varText">The length of the song (milliseconds)</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!--Exploratory Data Analysis-->
+    <div id = "exploratoryData">
+      <h2>Exploratory Data Analysis</h2>
+        <p>For interpreting this dataset, I was interested in learning about which artists and genres had many popular songs. I wanted to see if the artists with the most songs on the top 50 would also be artists in the genres that were present the most. As for the song itself, I will be analyzing the danceability (ease to dance) and valence (positivity) to see whether songs that are structured around a positive emotion and physical movement happen to be the most popular.</p>
+    </div>
+
+    <!--Where to find the dataset on Kaggle?-->
+    <div>
+      <h3>Dataset</h3>
+        <p><a href='https://www.kaggle.com/atillacolak/top-50-spotify-tracks-2020'>Open</a> this dataset on Kaggle.</p>
+    </div>
+
+    <!--Findings and Explanation of Visualizations-->
+    <div id = "findingsViz">
+      <h2>Findings from Visualizations</h2>
+      <div id = "genre"><h3>Top 50 Songs by Genre</h3></div>
+        <p>28% of songs were pop songs while 26% were hip-hop/rap. It is also important to consider that other genres (reference legend on right) also included pop and hip-hop with subgenres. Pop and hip-hop actually take up more than the 28% and 26% figures including the subgenres.</p>
+        <p>The pie chart format was used to show the proportions of the songs by percentage of a whole.</p>
+      <img src='./images/piechartgenre.png' class = 'center' width='750' height='500' alt='Artists in the Top 50 Spotify Songs in 2020 and How Many Songs'> 
+    
+      <!--All 50 Analysis-->
+      <div id = "allSongs"><h3>All 50 Songs Analysis</h3></div>
+        <p>In the two following visualizations, each song is represented. One (first dot) on the x-axis is the top song and 50 (last dot) is the 50th top song. The variables (danceability and valence) are represented on the y-axis (left). Bubble charts were used since this would show the position of each song in terms of danceability. Utilizing a bar chart would make it more difficult to discern between songs since there would be 50 bars.</p>
+        <p>Danceability means it is easier to dance to. In this graph, the majority of songs are 0.65 and up. Therefore, most popular songs were songs that were easier to dance to. This does not mean that all songs with high danceability are dance (genre) songs.</p>
+      <img src='./images/danceability.svg' class = 'center' width='750' height='500' alt='Artists in the Top 50 Spotify Songs in 2020 and How Many Songs'> 
+
+      <p>Valence relates to the positiveness to a song. In the graph, it is noted that most songs have a valence level of over 0.5. It is concluded that mainly positive songs were popular in 2020.</p>
+      <img src='./images/valence.svg' class = 'center' width='750' height='500' alt='Artists in the Top 50 Spotify Songs in 2020 and How Many Songs'> 
+
+    </div>
+
+
+    <!--Top Three Artists with Three Songs-->
+  <div id = "artists">
+    <h3>Artists and Number of Songs in Top 50</h3>
+        <p>Of 50 songs, seven artists had more than one song in the top 50.</p>
+        <p>The bubble chart was used since the sizing would be able to emphasize the artists that had more than one songs and how many. Since there were only three numbers (1,2,3), the gradient from Tableau happened to be colors more easily discernable.</p>
+      <ol>
+          <li>Billie Eilish, Dua Lipa, and Travis Scott (3)</li>
+          <li>Harry Styles, Justin Bieber, Lewis Capaldi, and Post Malone (2)</li>
+          <li>All Other Artists</li>
+      </ol>
+    <img src='./images/packedbubbleartist.png' class = 'center' width='750' height='500' alt='Top 50 Spotify Songs of 2020 by Genre'>
+  </div>
+
+      <!--Top Three Artists with Three Songs-->
+    <div>
+      <h3>Artists with the Most Songs in Top 50</h3>
+      <p>As seen in the bubble chart, Billie Eilish, Dua Lipa, and Travis Scott are tied for the most amount of songs (three) in 2020's top 50 Spotify songs. Take a listen to <i>their</i> top songs to learn more about their musical style.</p>
+
+      <div class = "containerTopThree">
+
+        <!--Billie Eilish Hover-->
+        <div class = "spotifyBillieEilish">
+          <iframe src="https://open.spotify.com/embed/artist/6qqNVTkY8uBg9cP3Jd7DAH?theme=0" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class = "containerBillieEilish">
+          <div class = "imageBillieEilish">
+            <img src='./images/billieeilish.png' class='center' width='200' height='200' alt='Billie Eilish'>
+            <div class = "overlay">
+              <div class = "text">Billie Eilish</div>
+            </div>
+          </div>
+        </div>
+
+        <!--Dua Lipa Hover-->
+        <div class = "spotifyDuaLipa">
+          <iframe src="https://open.spotify.com/embed/artist/6M2wZ9GZgrQXHCFfjv46we?theme=0" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class = "containerDuaLipa">
+          <div class = "imageDuaLipa">
+            <img src='./images/dualipa.png' class='center' width='200' height='200' alt='Dua Lipa'>
+            <div class = "overlay">
+              <div class = "text">Dua Lipa</div>
+            </div>
+          </div>
+        </div>
+
+        <!--Travis Scott Hover-->
+        <div class = "spotifyTravisScott">
+          <iframe src="https://open.spotify.com/embed/artist/0Y5tJX1MQlPlqiwlOH1tJY?theme=0" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class = "containerTravisScott">
+          <div class = "imageTravisScott">
+            <img src='./images/travisscott.png' class='center' width='200' height='200' alt='Travis Scott'>
+            <div class = "overlay">
+              <div class = "text">Travis Scott</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--Conclusion-->
+    <div id = "conclusion">
+      <h2>Conclusion</h2>
+        <p>I hope you found this analysis an interesting way to analyze with music that is taking over the radio. Music is evolving. One "hot topic" in music is the emergence of Tik Tok sounds in the music industry. Remixes to songs released two weeks ago or two decades ago can pop up, resulting in an uptick in streams and sales of the song. There is exploration to be completed about how this affects the charts from year to year especially with the variables analyzed. Feel free to explore any part of the page again using the navigation bar on the left.</p>
+    </div>
+
+  </main>
+
+  </body>
+</html>
