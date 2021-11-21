@@ -1,0 +1,551 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background: linear-gradient(180deg, black 0%, #2c2811 3%, #26240f 6%, #171717 9%);
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Alternative Colors: #4d4d4d #2f2e2e */
+
+
+
+
+/* Playlists similar to Spotify menu */
+.containerGreetingPlaylists {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.newMusicFriday {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+}
+
+.topSongsGlobal {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+}
+
+.viralGlobal {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+
+.peacefulMeditation {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+}
+
+.workFromHome {
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+}
+
+.happyHoliday {
+    grid-column: 3;
+    grid-row: 2;
+    width: 100%;
+}
+
+
+
+/* Main Part of the Page */
+body {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-areas: 'nav' 'main';
+}
+
+main {
+    margin: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 56pt;
+    color: white;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 24pt;
+    padding-top: 5%;
+    padding-left: 5px;
+    color: #1DB954;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 17pt;
+    padding: 7px;
+    padding-top: 3%;
+    color: gray;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 25pt;
+    padding: 0px;
+    color: whitesmoke;
+}
+
+p {
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: aquamarine;
+}
+
+a:visited {
+    color: #1DB954;
+}
+
+
+
+/* Nav Bar with Hover Links */
+
+nav {
+    background: linear-gradient(180deg, black 0%, #0f0f0f 4%, #171717 5%);
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 20%;
+    padding-right: 20px;
+    position: sticky;
+}
+
+nav a {
+    display: block;
+    color: #8a8a8a;
+    text-decoration: none;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+nav a:visited {
+    color: #8a8a8a;
+}
+
+nav a:hover, nav a:focus {
+    color: whitesmoke;
+    transition: 0.6s;
+} 
+
+
+
+/* Variable Hover */
+.variables {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+}
+
+.centerVar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.varTitle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.varEnergy {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varDanceability {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varKey {
+    grid-column: 1;
+    grid-row: 3;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varLoudness {
+    grid-column: 1;
+    grid-row: 4;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varAcousticness {
+    grid-column: 1;
+    grid-row: 5;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varSpeechiness {
+    grid-column: 1;
+    grid-row: 6;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varInstrumentalness {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varLiveness {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varValence {
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varTempo {
+    grid-column: 2;
+    grid-row: 4;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.varDuration {
+    grid-column: 2;
+    grid-row: 5;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+/* Variable Text and Overlay in Hover */
+.overlayVar {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 10px;
+    transition: .5s ease;
+    background-color: #1DB954;
+}
+
+.varEnergy:hover .overlayVar {
+    opacity: 1;
+}
+
+.varDanceability:hover .overlayVar {
+    opacity: 1;
+}
+
+.varKey:hover .overlayVar {
+    opacity: 1;
+}
+
+.varLoudness:hover .overlayVar {
+    opacity: 1;
+}
+
+.varAcousticness:hover .overlayVar {
+    opacity: 1;
+}
+
+.varSpeechiness:hover .overlayVar {
+    opacity: 1;
+}
+
+.varInstrumentalness:hover .overlayVar {
+    opacity: 1;
+}
+
+.varLiveness:hover .overlayVar {
+    opacity: 1;
+}
+
+.varValence:hover .overlayVar {
+    opacity: 1;
+}
+
+.varTempo:hover .overlayVar {
+    opacity: 1;
+}
+
+.varDuration:hover .overlayVar {
+    opacity: 1;
+}
+
+.varText {
+    color: black;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+
+
+/* Grid for All Analyses*/
+
+.gridText {
+    padding-right: 15px;
+}
+
+.caption {
+    font-size: 11pt;
+    text-align: center;
+    font-style: italic;
+    color: #1DB954;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Grid for Genre Analysis*/
+
+.containerGenre {
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+
+.pieChart {
+    grid-column: 1;
+}
+
+.pieChartText {
+    grid-column: 2;
+    position: relative;
+}
+
+
+
+/* Grid for Artists Analysis*/
+
+.containerArt {
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.artText {
+    grid-column: 1;
+    position: relative;
+}
+
+.art {
+    grid-column: 2;
+}
+
+
+
+/* Grid for Top Three Artists Analysis*/
+
+.containerAll {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ten {
+    grid-column: 1;
+    position: relative;
+}
+
+.nine {
+    grid-column: 2;
+}
+
+
+
+
+/* Images with the Artists and Hover */
+.containerTopThree {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+
+
+/* Billie Eilish Section */
+
+.containerBillieEilish {
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.imageBillieEilish {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.spotifyBillieEilish {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+}
+
+
+
+/* Dua Lipa Section */
+
+.containerDuaLipa {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.imageDuaLipa {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.spotifyDuaLipa {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+
+
+
+/* Travis Scott Section */
+
+.containerTravisScott {
+    grid-column: 3;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.imageTravisScott {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.spotifyTravisScott {
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+}
+
+
+
+/* Text and Overlay in Hover for Artists */
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 100%;
+    transition: .5s ease;
+    background-color: #1DB954;
+}
+
+.imageBillieEilish:hover .overlay {
+    opacity: 0.8;
+}
+
+.imageDuaLipa:hover .overlay {
+    opacity: 0.8;
+}
+
+.imageTravisScott:hover .overlay {
+    opacity: 0.8;
+}
+
+.text {
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 72px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}  
