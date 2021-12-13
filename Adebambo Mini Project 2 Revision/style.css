@@ -1,0 +1,199 @@
+html, body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #003366;
+    background: #b8d6e9;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 18pt;
+}
+
+p {
+    color: #003366;
+    font-size: 14pt;
+}
+
+text {
+    color: #003366;
+}
+
+/* Page */
+
+div#container {
+    height: 200vh;
+    max-height: 200vh;
+    overflow: hidden;
+}
+
+/* Title */
+
+.centerTitle {
+    width: 100%;
+    align-items: center;
+}
+
+/* Viz and Legend */
+
+.buttons {
+    background: #b8d6e9;
+    color:#003366;
+    border-color: 10px #003366;
+    padding: 10px 15px;
+    border-radius: 99px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#containerButtons{
+    text-align: center;
+    background-color: #003366;
+    padding: 1%;
+}
+
+.buttons:hover {
+    background: #4c335a;
+    color: #b8d6e9;
+}
+
+figure#chart {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.axisLabel {
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003366;
+}
+
+.chartLegend {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    padding: 1%;
+}
+
+.viz {
+    grid-row: auto;
+    grid-column: 1;
+}
+
+.legend {
+    grid-row: auto;
+    grid-column: 2;
+}
+
+.icon {
+    width: 275px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    border-style: solid;
+    border-color: rgb(206, 223, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+/* Narrative */
+
+#discussion {
+    background-color: #4c335a;
+    color: #ebebeb;
+    display: flex;
+    padding: 1%;
+    padding-left: 2%;
+    justify-content: center;
+}
+
+.discussionGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 70% auto;
+    column-gap: 6%;
+}
+
+#discussionResearch {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#discussionCircle {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.discussionCircle li {
+    font-size: 18pt;
+}
+
+#discussion p {
+    color: #ebebeb;
+    font-size: 16pt;
+}
+
+/* Footer */
+
+#footer {
+    color: #ebebeb;
+    display: flex;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    justify-content: center;
+}
+
+#footerText {
+    width: 90%;
+    display: inline-block;
+}
+
+#footer p {
+    color: #4c335a;
+    text-align: left;
+}
+
+a {
+    color: rgb(255, 127, 249);
+}
+
+a:visited {
+    color: #46a5ff;
+}
+
+/* Tooltip */
+
+.tooltip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    pointer-events: none;
+    /* Aesthetic */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14pt;
+    background-color: rgba(179, 227, 241, 0.555);
+    padding: 2px;
+}
