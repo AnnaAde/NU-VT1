@@ -1,0 +1,191 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: gainsboro;
+    color: #3b3937;
+    margin: 0;
+}
+
+div#container {
+    height: 200vh;
+    max-height: 200vh;
+    width: fit-content;
+    overflow: hidden;
+}
+
+figure#chart {
+    height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 14pt;
+}
+
+h3 {
+    text-align: center;
+    font-size: 13pt;
+}
+
+p {
+    font-size: 11pt;
+}
+
+/* Title */
+
+.centerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1% 5% 0% 5%;
+}
+
+/* Intro and Discussion */
+
+#intro, #discussion {
+    background-color: #3b3937;
+    color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 2% 1% 2%;
+    text-align: justify;
+}
+
+/* Buttons, Viz, and Results */
+
+.buttons {
+    background: #ebebeb;
+    color:#3b3937;
+    border-color: 10px #3b3937;
+    padding: 10px 15px;
+    border-radius: 99px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#containerButtons{
+    text-align: center;
+    padding: 1%;
+}
+
+.buttons:hover {
+    background: #3b3937;
+    color: #ebebeb;
+}
+
+/* Flex was not working the best for this so I used grid.*/
+.chartLegend {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 77% auto;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+}
+
+.viz {
+    grid-row: auto;
+    grid-column: 1;
+}
+
+.axisLabel {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.legend {
+    grid-row: auto;
+    grid-column: 2;
+    margin-right: 8%;
+}
+
+/* Hover */
+
+.definitions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerVar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.varTitle {
+    font-size: 14pt;
+}
+
+.varOne, .varTwo, .varThree, .varFour {
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Variable Text and Overlay in Hover */
+
+.overlayVar {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 5px;
+    transition: .5s ease;
+}
+
+.varOne:hover .overlayVar, .varTwo:hover .overlayVar, .varThree:hover .overlayVar, .varFour:hover .overlayVar {
+    opacity: 1;
+}
+
+.varText {
+    color: #ebebeb;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: 14pt;
+} 
+
+/* Tooltip */
+
+.tooltip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    pointer-events: none;
+    /* Aesthetic */
+    font-size: 12pt;
+    background-color: #e0d5c9;
+    padding: 2px;
+    width: max-content;
+}
+
+#references {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    padding: 1% 2% 1% 2%;
+}

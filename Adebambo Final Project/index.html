@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Law & Order Series Ratings</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+
+            <!-- Title -->
+            <div class="centerTitle">
+                <img src="/images/laologo.svg" alt="Law and Order Logo">
+                <h3>Comparing the Law & Order Series' Ratings from the First to the Last Season</h3>
+            </div>
+
+            <!-- Title -->
+            <div id="intro">
+                <p>Hello, I am Anna and I have been an avid crime drama viewer for as long as I can remember. I watch any and all crime dramas I can find. This includes Bones, NCIS, CSI, Blue Bloods, and Criminal Minds. I was curious how ratings changed over the past decade for even the most popular shows and made this dataset using the ratings of the first and last season of the Law & Order shows. There are technically seven Law & Order shows, however I excluded the Trial by Jury, Los Angeles, and True Crime spin-offs since they did not run for more than one season.</p>
+                <h2>First, what are ratings are how are they calculated?</h2>
+                <p>Nielsen ratings are the standard for TV viewership measurement. They have been providing metrics since 1950. According to Nielsen, rating shows the percent of households or people that tuned to a program during a given period of time. Specifically, these ratings tell media participants who was exposed to content and advertising. This is how value and, therefore, pricing is set for advertisers purchasing TV ad spots. Let's see how Law & Order's viewership has changed among series and seasons.</p>
+            </div>
+
+            <!-- Viz, Filter, and Legend-->
+            <div class="chartLegend">
+                <div class="viz"><figure id="chart"></figure></div>
+                <div class="legend">
+                        <h3>Compare Ratings from the First to the Last Season</h3>
+                        <p style="text-align: center;">First, you'll see the ratings from the series premiere. Click between the buttons to compare how the season premiere ratings change from the first season to the latest.</p>
+                        <!-- Buttons -->
+                        <div id="containerButtons">
+                            <button id="first" class="buttons">First Season</button>
+                            <button id="latest" class="buttons">Last or Latest Season</button>
+                        </div>
+                        <h3>Hover to see Percent Change</h3>
+                        <div class="definitions">
+                            <div class = "varOne">
+                                <p class = 'varTitle' style="text-align: center">Law and Order</p>
+                                    <div class = "overlayVar" style="background-color: black">
+                                        <div class = "varText" class="centerVar">-50.7% over 19 years</div>
+                                    </div>
+                            </div>
+                            <div class = "varTwo">
+                                <p class = 'varTitle' style="text-align: center">Law & Order: SVU</p>
+                                    <div class = "overlayVar" style="background-color: gray">
+                                        <div class = "varText" class="centerVar">-69.8% over 22 years</div>
+                                    </div>
+                            </div>
+                            <div class = "varThree">
+                                <p class = 'varTitle' style="text-align: center">Law & Order: Criminal Intent</p>
+                                    <div class = "overlayVar" style="background-color: #20438f">
+                                        <div class = "varText" class="centerVar">-62.8% over ten years</div>
+                                    </div>
+                            </div>
+                            <div class = "varFour">
+                                <p class = 'varTitle' style="text-align: center">Law & Order: Organized Crime</p>
+                                    <div class = "overlayVar" style="background-color: #a30606">
+                                        <div class = "varText" class="centerVar">-46.8% over five months</div>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Discussion -->
+            <div id="discussion">
+                <h2>Findings and Possible Rationale</h2>
+                <p>Overall, all series ratings declined. Only SVU and Organized Crime are currently airing. For adults 18-49, Organized Crime and SVU ranked 13th and 14th most watched show in the 2020-2021 season despite having ratings which fall among the original and Criminal Intent, both canceled due to falling ratings.</p>
+                <p>SVU fans such as myself wonder if SVU has passed its prime. Surpassing Gunsmoke, SVU is the longest-running primetime U.S. live-action series and the only live-action primetime series debuting in the 1990s to release new episodes. Elliot Stabler, originally a character from SVU, is featured in Organized Crime. Some wonder if loyal SVU fans may be bolstering viewership.</p>
+            </div>
+
+            <div id="references"> <!-- Below Brown Section -->
+                <div>
+                    <p>Anna Adebambo</p>
+                    <p>Visualization Technologies I</p>
+                    <p>Fall 2021</p>
+                </div>
+                <div>
+                    <p><b>References</b></p>
+                    <p>Nielsen. (2021). Ratings Academy | Nielsen. Ratings Academy Nielsen. <a href="https://ratingsacademy.nielsen.com/television-101/nielsen-gold-standard-panel-source-of-truth" target="_blank">https://ratingsacademy.nielsen.com/television-101/nielsen-gold-standard-panel-source-of-truth</a></p>
+                    <p>Nielsen. (2021a). Nielsen TV Ratings. <a href="https://www.nielsen.com/us/en/solutions/measurement/television/" target="_blank">https://www.nielsen.com/us/en/solutions/measurement/television/</a></p>
+                </div>
+            </div>
+
+        <!-- End Container -->
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
